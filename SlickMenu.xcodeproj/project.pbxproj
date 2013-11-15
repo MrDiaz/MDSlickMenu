@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A49C71A818186605009FF696 /* MDSlickMenuButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = A49C71A718186605009FF696 /* MDSlickMenuButton.xib */; };
 		A4C54DD1181087440059E662 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4C54DD0181087440059E662 /* Foundation.framework */; };
 		A4C54DD3181087440059E662 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4C54DD2181087440059E662 /* CoreGraphics.framework */; };
 		A4C54DD5181087440059E662 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4C54DD4181087440059E662 /* UIKit.framework */; };
@@ -21,6 +22,9 @@
 		A4C54DF2181087440059E662 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4C54DD4181087440059E662 /* UIKit.framework */; };
 		A4C54DFA181087440059E662 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A4C54DF8181087440059E662 /* InfoPlist.strings */; };
 		A4C54DFC181087440059E662 /* SlickMenuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C54DFB181087440059E662 /* SlickMenuTests.m */; };
+		A4C54E211810DEE60059E662 /* MDSlickMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C54E201810DEE60059E662 /* MDSlickMenu.m */; };
+		A4C54E2C1810F1C30059E662 /* MDSlickMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C54E2A1810F1C30059E662 /* MDSlickMenuItemView.m */; };
+		A4C54E2D1810F1C30059E662 /* MDSlickMenuItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4C54E2B1810F1C30059E662 /* MDSlickMenuItemView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A49C71A718186605009FF696 /* MDSlickMenuButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MDSlickMenuButton.xib; sourceTree = "<group>"; };
 		A4C54DCD181087440059E662 /* SlickMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlickMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4C54DD0181087440059E662 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		A4C54DD2181087440059E662 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -53,6 +58,11 @@
 		A4C54DF7181087440059E662 /* SlickMenuTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SlickMenuTests-Info.plist"; sourceTree = "<group>"; };
 		A4C54DF9181087440059E662 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A4C54DFB181087440059E662 /* SlickMenuTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SlickMenuTests.m; sourceTree = "<group>"; };
+		A4C54E1F1810DEE60059E662 /* MDSlickMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MDSlickMenu.h; path = SlickMenu/MDSlickMenu.h; sourceTree = "<group>"; };
+		A4C54E201810DEE60059E662 /* MDSlickMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MDSlickMenu.m; path = SlickMenu/MDSlickMenu.m; sourceTree = "<group>"; };
+		A4C54E291810F1C30059E662 /* MDSlickMenuItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MDSlickMenuItemView.h; path = SlickMenu/MDSlickMenuItemView.h; sourceTree = "<group>"; };
+		A4C54E2A1810F1C30059E662 /* MDSlickMenuItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MDSlickMenuItemView.m; path = SlickMenu/MDSlickMenuItemView.m; sourceTree = "<group>"; };
+		A4C54E2B1810F1C30059E662 /* MDSlickMenuItemView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MDSlickMenuItemView.xib; path = SlickMenu/MDSlickMenuItemView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +89,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A49C71A6181865E2009FF696 /* Sample */ = {
+			isa = PBXGroup;
+			children = (
+				A4C54DDF181087440059E662 /* AppDelegate.h */,
+				A4C54DE0181087440059E662 /* AppDelegate.m */,
+				A4C54DE2181087440059E662 /* Main.storyboard */,
+				A4C54DE5181087440059E662 /* ViewController.h */,
+				A4C54DE6181087440059E662 /* ViewController.m */,
+			);
+			name = Sample;
+			sourceTree = "<group>";
+		};
+		A49C71A918186652009FF696 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				A49C71A718186605009FF696 /* MDSlickMenuButton.xib */,
+				A4C54E2B1810F1C30059E662 /* MDSlickMenuItemView.xib */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
 		A4C54DC4181087440059E662 = {
 			isa = PBXGroup;
 			children = (
@@ -112,13 +143,14 @@
 		A4C54DD6181087440059E662 /* SlickMenu */ = {
 			isa = PBXGroup;
 			children = (
-				A4C54DDF181087440059E662 /* AppDelegate.h */,
-				A4C54DE0181087440059E662 /* AppDelegate.m */,
-				A4C54DE2181087440059E662 /* Main.storyboard */,
-				A4C54DE5181087440059E662 /* ViewController.h */,
-				A4C54DE6181087440059E662 /* ViewController.m */,
+				A49C71A6181865E2009FF696 /* Sample */,
 				A4C54DE8181087440059E662 /* Images.xcassets */,
 				A4C54DD7181087440059E662 /* Supporting Files */,
+				A4C54E1F1810DEE60059E662 /* MDSlickMenu.h */,
+				A4C54E201810DEE60059E662 /* MDSlickMenu.m */,
+				A4C54E291810F1C30059E662 /* MDSlickMenuItemView.h */,
+				A4C54E2A1810F1C30059E662 /* MDSlickMenuItemView.m */,
+				A49C71A918186652009FF696 /* UI */,
 			);
 			path = SlickMenu;
 			sourceTree = "<group>";
@@ -230,6 +262,8 @@
 			files = (
 				A4C54DE9181087440059E662 /* Images.xcassets in Resources */,
 				A4C54DDB181087440059E662 /* InfoPlist.strings in Resources */,
+				A49C71A818186605009FF696 /* MDSlickMenuButton.xib in Resources */,
+				A4C54E2D1810F1C30059E662 /* MDSlickMenuItemView.xib in Resources */,
 				A4C54DE4181087440059E662 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -249,8 +283,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4C54E211810DEE60059E662 /* MDSlickMenu.m in Sources */,
 				A4C54DE7181087440059E662 /* ViewController.m in Sources */,
 				A4C54DE1181087440059E662 /* AppDelegate.m in Sources */,
+				A4C54E2C1810F1C30059E662 /* MDSlickMenuItemView.m in Sources */,
 				A4C54DDD181087440059E662 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,6 +496,7 @@
 				A4C54E01181087450059E662 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A4C54E02181087450059E662 /* Build configuration list for PBXNativeTarget "SlickMenuTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +505,7 @@
 				A4C54E04181087450059E662 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

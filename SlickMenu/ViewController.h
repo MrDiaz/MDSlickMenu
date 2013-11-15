@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MDSlickMenu.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UIScrollViewDelegate, MDSlickMenuDelegate>
 
 @end
