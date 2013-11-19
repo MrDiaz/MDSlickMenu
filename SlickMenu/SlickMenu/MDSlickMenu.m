@@ -134,6 +134,7 @@
         case MDSMAnimationStyleAccordion:
             break;
         case MDSMAnimationStyleDrop:
+            [self animateDrop];
             break;
         default:
             [self animateLeftToRight];
@@ -174,20 +175,27 @@
 
 -(void)animateDrop {
     __block CGFloat yPos = 0;
-    NSTimeInterval timeDelay = 0;
-	for (int i = 0; i < self.scrollView.subviews.count; i++) {
-		if ([[self.scrollView.subviews objectAtIndex:i] isKindOfClass:[MDSlickMenuItemView class]]) {
-			MDSlickMenuItemView *itemView = [self.scrollView.subviews objectAtIndex:i];
-			itemView.frame = CGRectMake(kStartingXPos, yPos, itemView.frame.size.width, itemView.frame.size.height);
-			timeDelay = timeDelay + 0.01;
-			itemView.alpha = 1.0f;
-			[UIView animateWithDuration:0.2 delay:timeDelay options:UIViewAnimationOptionCurveEaseInOut animations: ^{
-			    itemView.frame = CGRectMake(kFinalXPos, yPos, itemView.frame.size.width, itemView.frame.size.height);
-                yPos += itemView.frame.size.height;
-			} completion: ^(BOOL finished) {
-			}];
-		}
-	}
+    
+    for (int i = 0; i < self.scrollView.subviews.count; i++) {
+        if ([[self.scrollView.subviews objectAtIndex:i] isKindOfClass:[MDSlickMenuItemView class]]) {
+            MDSlickMenuItemView *itemView = [self.scrollView.subviews objectAtIndex:i];
+            itemView.frame = CGRectMake(kFinalXPos, yPos, itemView.frame.size.width, itemView.frame.size.height);
+            itemView.alpha = 1.0f;
+            yPos += itemView.frame.size.height;
+        }
+    }
+    
+    if (_isOpened) {
+        _scrollView.frame = CGRectMake(0, self.button.frame.origin.y + self.button.frame.size.height, 320, 0);
+        [UIView animateWithDuration:1 animations:^{
+            _scrollView.frame = CGRectMake(0, self.button.frame.origin.y + self.button.frame.size.height, 320, self.frame.size.height);
+        }];
+    }
+    else {
+        [UIView animateWithDuration:1 animations:^{
+            _scrollView.frame = CGRectMake(0, self.button.frame.origin.y + self.button.frame.size.height, 320, 0);
+        }];
+    }
 }
 
 - (void)removeAllViewsExcept:(MDSlickMenuItemView *)itemView {
@@ -216,11 +224,11 @@
 	
     if ([view isKindOfClass:[MDSlickMenuItemView class]]) { // Did we hit one of our views?
         
-        [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations: ^{
-            _button.titleLabel.alpha = 0.0f;
-        } completion: ^(BOOL finished) {
-            [_button setTitle:@"" forState:UIControlStateNormal];
-        }];
+//        [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations: ^{
+//            _button.titleLabel.alpha = 0.0f;
+//        } completion: ^(BOOL finished) {
+//            [_button setTitle:@"" forState:UIControlStateNormal];
+//        }];
         
 		MDSlickMenuItemView *itemView = (MDSlickMenuItemView*)view;
 		[self removeAllViewsExcept:itemView];

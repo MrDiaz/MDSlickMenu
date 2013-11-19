@@ -32,6 +32,7 @@
     [super viewDidLoad];
     
     [self.menuObject setDelegate:self];
+    self.menuObject.animationStyle = MDSMAnimationStyleDrop;
     
     self.categories = @[@"All Categories", @"Abstract", @"Animals", @"Black and White", @"Celebrities", @"City and Architecture", @"Commercial", @"Concert", @"Family", @"Fashion", @"Film", @"Art", @"Food", @"Landscapes", @"Macro", @"Nature", @"People", @"Performing Art", @"Transportation", @"Travel", @"Underwater", @"Street", @"Still Life", @"Wedding", @"Urban Exploration", @"Gaming", @"Movies", @"Shows"];
     
