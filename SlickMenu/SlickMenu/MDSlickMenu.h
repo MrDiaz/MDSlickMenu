@@ -18,7 +18,7 @@
 
 @optional
 
-// Item selected at index
+// Called after the user makes a selection. Will hide the menu
 - (void)slickMenu:(MDSlickMenu *)slickMenu didSelectItemAtIndex:(NSInteger)index;
 
 // Specific height for a given index
@@ -40,15 +40,17 @@
 @interface MDSlickMenu : UIControl
 
 typedef enum  {
-    MDSMAnimationStyleLeftToRight,
+    MDSMAnimationStyleLeftToRight = 0,
     MDSMAnimationStyleDrop,
     MDSMAnimationStyleAccordion
 } MDSlickMenuAnimationStyle;
 
 @property (nonatomic, assign) id <MDSlickMenuDelegate> delegate;
 
+/* Duration of animation in seconds */
 @property (nonatomic, assign) NSTimeInterval animationDuration;
 
+/* Type of animation to use */
 @property (nonatomic, assign) MDSlickMenuAnimationStyle animationStyle;
 
 /* Will ask the delegate for data */
