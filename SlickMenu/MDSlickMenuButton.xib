@@ -12,7 +12,7 @@
             <color key="backgroundColor" red="0.50614493090000001" green="0.5552976248" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
             <inset key="contentEdgeInsets" minX="18" minY="0.0" maxX="0.0" maxY="0.0"/>
-            <state key="normal" title="Button">
+            <state key="normal">
                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
             </state>

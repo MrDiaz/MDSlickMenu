@@ -16,8 +16,6 @@
 
 @interface MDSlickMenu ()
 
-@property (nonatomic, strong) NSArray *items; // The items in the menu
-@property (nonatomic, strong) UIView *backgroundView; // Background view for the whole menu when opened
 @property (nonatomic, strong) UIScrollView *scrollView; // Used to add our menu items
 @property (nonatomic, strong) UIButton *button; // Initiates the action
 @property (nonatomic, strong) UITapGestureRecognizer *tap; // To detect user taps
@@ -95,6 +93,9 @@
 	}
     
     [self.scrollView setContentSize:CGSizeMake(self.frame.size.width, numberOfItems * view.frame.size.height + view.frame.size.height)];
+    
+    // Set default text for dropdown button
+    [self.button setTitle:[self itemNameAtIndex:0] forState:UIControlStateNormal];
 }
 
 - (NSString *)itemNameAtIndex:(NSInteger)index {

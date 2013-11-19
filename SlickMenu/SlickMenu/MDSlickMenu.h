@@ -44,7 +44,7 @@ typedef enum  {
 
 @property (nonatomic, assign) id <MDSlickMenuDelegate> delegate;
 
-/* Duration of animation in seconds */
+/* Duration of animation in seconds - Default is 0.4 */
 @property (nonatomic, assign) NSTimeInterval animationDuration;
 
 /* Type of animation to use */
