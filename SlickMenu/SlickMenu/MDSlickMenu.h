@@ -21,9 +21,6 @@
 // Called after the user makes a selection. Will hide the menu
 - (void)slickMenu:(MDSlickMenu *)slickMenu didSelectItemAtIndex:(NSInteger)index;
 
-// Specific height for a given index
-- (NSInteger)slickMenu:(MDSlickMenu *)slickMenu heightForItemAtIndex:(NSInteger)index;
-
 @required
 
 // Title for an item at specific index
